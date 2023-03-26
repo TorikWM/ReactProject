@@ -1,21 +1,26 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { NavLink  ,  Link } from 'react-router-dom';
+import './css/NavBarX.css';
+
 
 function NavBarx() {
   return (
     <>
-      <Navbar bg="dark" variant="dark">
+      { <Navbar bg="Cornsilk" variant="Cornsilk" className='NavTitle'>
         <Container>
-          <Navbar.Brand href="#Navbar">Navbar</Navbar.Brand>
+          <Navbar.Brand  to="/">Navbar</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#Home">Home</Nav.Link>
-            <Nav.Link href="#Pictures">Pictures</Nav.Link>
-            <Nav.Link href="#Book Now">Book Now</Nav.Link>
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/Pictures">Pictures</NavLink>
+            <NavLink to="/Book Now">Book Now</NavLink>
           </Nav>
         </Container>
       </Navbar>
+     
     
+    }
 
 
     </>
